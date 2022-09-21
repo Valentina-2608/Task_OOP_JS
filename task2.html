@@ -1,0 +1,33 @@
+﻿ <!DOCTYPE HTML>
+<html>
+<head>
+<title>Task2</title>
+</head>
+<body>
+<!-- Create a Reactangle class.
+Create a method getSquare that will return the square of ​​a rectangle.
+Create a method getPerimeter that will return the perimeter of ​​a rectangle.
+-->
+<script>
+class Rectangle{
+constructor(height, width){
+	this.height = height;
+	this.width = width;
+}
+
+getSquare(){
+	return this.height * this.width;
+}
+
+getPerimeter(){
+	return 2 * (this.height + this.width);
+}
+
+}
+
+let rectangle = new Rectangle(10,30);
+console.log(rectangle.getSquare());
+console.log(rectangle.getPerimeter());
+</script>
+</body>
+</html>
