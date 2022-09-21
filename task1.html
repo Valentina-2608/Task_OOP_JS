@@ -1,0 +1,34 @@
+﻿ <!DOCTYPE HTML>
+<html>
+<head>
+<title>Task1</title>
+</head>
+<body>
+<!-- Create a Circle class that will describe a circle.
+Radius has a private property.
+Create a method that will return the square of ​​a circle.
+Create a method that will return the circumference of a circle.
+-->
+<script>
+class Circle{
+#radius;
+constructor(radius){
+	this.#radius = radius;
+}
+
+squareCircle(){
+	return Math.round(this.#radius * this.#radius * Math.PI);
+}
+
+circumferenceCircle(){
+	return Math.round(this.#radius * 2 * Math.PI);
+}
+
+}
+
+let circle = new Circle(5);
+console.log(circle.squareCircle());
+console.log(circle.circumferenceCircle());
+</script>
+</body>
+</html>
