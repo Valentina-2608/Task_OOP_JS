@@ -1,0 +1,57 @@
+﻿ <!DOCTYPE HTML>
+<html>
+<head>
+<title>Task3</title>
+</head>
+<body>
+<!-- Create a Text class.
+Create a method that will return the symbols' quantity.
+Create a method that will return the letters' quantity.
+Create a method that will return the spaces' quantity.
+Create a method that will return the symbols' quantity except spaces.
+Create a method that will return the words' array.
+Create a method that will return the sentences' array.
+-->
+<script>
+class Text{
+constructor(text){
+	this.text = text;
+}
+
+getQuantity(){
+	return this.text.length;
+}
+
+getLettersQuantity(){
+	return this.text.match(/[a-zA-Z]/g).length;
+
+}
+
+getSpacesQuantity(){
+	return this.text.match(/[" "]/g).length;
+}
+
+getSymbolsQuantity(){
+	return this.text.match(/[a-zA-Z0-9\!@#$%^&*_/]/g).length;
+}
+
+
+getArray(){
+	return this.text.split(' ');
+}
+
+getArraySentences(){
+	return this.text.split('.');
+}
+}
+let text = new Text('12qw 34 op t_@t. Hello JavaScript');
+console.log(text.getQuantity());
+console.log(text.getLettersQuantity());
+console.log(text.getSpacesQuantity());
+console.log(text.getSymbolsQuantity());
+console.log(text.getArray());
+console.log(text.getArraySentences());
+
+</script>
+</body>
+</html>
