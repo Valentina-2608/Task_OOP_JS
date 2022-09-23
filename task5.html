@@ -1,0 +1,61 @@
+﻿ <!DOCTYPE HTML>
+<html>
+<head>
+<title>Task5</title>
+</head>
+<body>
+<!-- Create a Data class.
+Create a method that will return the year;
+Create a method that will return the number of the month;
+Create a method that will return the name of the month;
+Create a method that will return the number of the day;
+Create a method that will return the name of the day;
+-->
+<script>
+class Data{
+constructor(date){
+	this.date = date;
+}
+
+getYear(){
+	return this.date.getFullYear();
+
+}
+
+getNumberMonth(){
+	return this.date.getMonth() + 1;
+}
+
+getMonth(){
+let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+	return months[this.date.getMonth()];
+}
+
+
+
+
+getDay(){
+let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+	return days[this.date.getDay() -1 ];
+}
+
+getNumberDay(){
+	return this.date.getDay();
+
+}
+
+}
+
+
+let data = new Data;
+data.date = new Date();
+console.log(data.getYear());
+console.log(data.getNumberMonth());
+console.log(data.getMonth());
+console.log(data.getNumberDay());
+console.log(data.getDay());
+
+
+</script>
+</body>
+</html>
