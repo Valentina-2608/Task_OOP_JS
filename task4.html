@@ -1,0 +1,46 @@
+﻿ <!DOCTYPE HTML>
+<html>
+<head>
+<title>Task4</title>
+</head>
+<body>
+<!-- Create a Period class.
+Create a method that will return the difference between seconds of two dates.
+Create a method that will return the difference between minutes of two dates.
+Create a method that will return the difference between hours of two dates.
+
+-->
+<script>
+class Period{
+constructor(date1, date2){
+	this.date1 = date1;
+	this.date2 = date2;
+}
+showSeconds(){
+	return (this.date1 - this.date2)/1000 + ' seconds';
+
+}
+
+showMinutes(){
+	return (this.date1 - this.date2)/(60*1000) + ' minutes';
+
+}
+
+showHours(){
+	return (this.date1 - this.date2)/(60*60*1000) + ' hours';
+
+}
+
+}
+
+
+let period = new Period;
+period.date1 = new Date(2022, 9, 23, 19, 36, 34);
+period.date2 = new Date(2022, 9, 22, 19, 36, 34);
+console.log(period.showSeconds());
+console.log(period.showMinutes());
+console.log(period.showHours());
+
+</script>
+</body>
+</html>
