@@ -1,0 +1,50 @@
+﻿ <!DOCTYPE HTML>
+<html>
+<head>
+<title>Task6</title>
+</head>
+<body>
+<!-- Create a Data class.
+Create a newData with extends from Data class.
+Create method which add years to current date.
+Create method which add months to current date.
+Create method which add days to current date.
+-->
+<script>
+class Data{
+constructor(year, month, day){
+	this.year = year;
+	this.month = month;
+	this.day = day;
+
+}
+}
+
+
+class newData extends Data{
+constructor(year, month, day){
+super(year, month, day);
+}
+
+setYear(){
+	return this.year + 1;
+
+}
+
+setMonth(){
+	return this.month + 1;
+}
+
+setDay(){
+	return this.day +3;
+}
+}
+
+let data = new newData(2022, 9, 12);
+console.log(data.setYear());
+console.log(data.setMonth());
+console.log(data.setDay());
+
+</script>
+</body>
+</html>
