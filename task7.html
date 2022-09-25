@@ -1,0 +1,43 @@
+﻿ <!DOCTYPE HTML>
+<html>
+<head>
+<title>Task7</title>
+</head>
+<body>
+<!-- Create  User class.
+Create Student class with extends from Data class.
+Create method will return full name.
+Create method will return age.
+-->
+<script>
+class User{
+constructor(name,surname){
+	this.name = name;
+	this.surname = surname;
+}
+getName(){
+	return this.name;
+}
+}
+
+class Student extends User{
+constructor(name,surname,age){
+	super(name,surname);
+	this.age = age;
+}
+getFullName(){
+	return this.name + ' ' + this.surname;
+}
+
+getAge(){
+	return this.age;
+}
+}
+
+let student = new Student('Tom', 'Smit', 21);
+console.log(student.getFullName());
+console.log(student.getAge());
+
+</script>
+</body>
+</html>
